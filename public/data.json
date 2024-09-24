@@ -1,0 +1,26 @@
+[
+    { 
+        "src": "images/104869220.jpg", 
+        "species": "Kogelbiefstukzwam",
+        "observer": "Danny Sutjahjo",
+        "location": "Bostheather",
+        "time": "8:30",
+        "date": "24/9/2024"
+    },
+    { 
+        "src": "images/104869640.jpg", 
+        "species": "Grasbij",
+        "observer": "Sara Sleebos",
+        "location": "Koenenbos",
+        "time": "21:17",
+        "date": "23/9/2024"
+    },
+    { 
+        "src": "images/104869714.jpg", 
+        "species": "Brandbare bloem",
+        "observer": "Nico Vleespet",
+        "location": "Kinderbad",
+        "time": "11:11",
+        "date": "24/9/2024"
+    }
+]
