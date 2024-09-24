@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Carousel</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="carousel-container">
-        <div id="carousel-image" class="carousel-item"></div> <!-- Background image container -->
-        
-        <!-- Captions with specific IDs -->
-        <div id="species" class="caption"></div>
-        <div id="observer" class="caption"></div>
-        <div id="location" class="caption"></div>
-        <div id="time" class="caption"></div>
-        <div id="date" class="caption"></div>
+      <div id="carousel-image" class="carousel-item">
+        <div class="info">
+          <h1 id="species" class="caption"></h1>
+          <p id="observer" class="caption"></p>
+          <p id="date" class="caption"></p>
+        </div>
+      </div>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

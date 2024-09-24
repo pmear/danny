@@ -1,73 +1,66 @@
 /* Ensure body takes up the full height and width of the screen */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh; /* Full screen height */
-    width: 100vw;  /* Full screen width */
-    background-color: #000; /* Set background to black */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
 }
 
 /* Fullscreen container for the carousel */
 .carousel-container {
-    width: 100vw;  /* Full screen width */
-    height: 100vh; /* Full screen height */
-    position: relative;
-    overflow: hidden; /* Hide anything that overflows the container */
+  width: 100vw; /* Full screen width */
+  height: 100vh; /* Full screen height */
+  position: relative;
+  overflow: hidden; /* Hide anything that overflows the container */
 }
 
 /* Background image to cover full screen */
 .carousel-item {
-    width: 100%;
-    height: 100%;
-    background-size: cover;         /* Image fills the container, cropping as needed */
-    background-position: center;    /* Center the image */
-    background-repeat: no-repeat;   /* No image repetition */
-    position: absolute;             /* Allow positioning within the container */
-    top: 0;                         /* Align to the top of the container */
-    left: 0;                        /* Align to the left of the container */
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Image fills the container, cropping as needed */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No image repetition */
+  position: absolute; /* Allow positioning within the container */
+  top: 0; /* Align to the top of the container */
+  left: 0; /* Align to the left of the container */
+}
+
+.info {
+  position: absolute;
+  width: calc(100% - 40px);
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Base styling for all captions */
 .caption {
-    font-family: Arial, sans-serif; /* Use Arial font with fallback to a generic sans-serif */
-    font-weight: bold;              /* Make the font bold */
-    position: absolute; /* Use absolute positioning */
-    width: 100%;       /* Full width */
-    text-align: left; /* Center text */
-    color: #fff;       /* White text */
-    padding: 0px;     /* Padding */
-    margin-left: 100px;  /* Adds space to the left of the element, moving it to the right */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
 }
 
 /* Specific styles for each caption */
 #species {
-    bottom: 166px;      /* Positioning for species */
-    font-size: 76px;    /* Font size */
-    font-weight: bold;  /* Bold text */
-    }
-
+  font-size: 76px;
+  font-weight: bold;
+}
 #observer {
-    display: none;  /* Hides the element and removes it from the layout */
-    bottom: 200px;      /* Positioning for observer */
-    font-size: 24px;    /* Font size */
-    font-weight: normal; /* Normal weight */
-    background-color: rgba(0, 0, 0, 0.4); /* Slightly transparent background */
+  font-size: 24px;
 }
-
-#location {
-    bottom: 120px;      /* Positioning for location */
-    font-size: 36px;    /* Font size */
-}
-
-#time {
-    bottom: 60px;      /* Positioning for time */
-    font-size: 48px;    /* Font size */
-}
-
+/* #location {
+  font-size: 36px;
+  font-weight: normal;
+} */
+/* #time {
+  font-size: 48px;
+} */
 #date {
-    display: none;  /* Hides the element and removes it from the layout */
-    bottom: 40px;       /* Positioning for date */
-    font-size: 48px;    /* Font size */
-    font-weight: normal; /* Normal weight */
-    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+  font-size: 48px;
 }

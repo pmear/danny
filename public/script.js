@@ -9,27 +9,33 @@ const timeElement = document.getElementById("time");
 const dateElement = document.getElementById("date");
 
 const displayData = (data) => {
-  imageElement.style.backgroundImage = `url(${data.src})`;
-  speciesElement.textContent = data.species;
+  imageElement.style.backgroundImage = `url(${data.photo})`;
+  speciesElement.textContent = data.name;
   observerElement.textContent = data.observer;
-  locationElement.textContent = data.location;
-  timeElement.textContent = data.time;
+  // locationElement.textContent = data.location;
+  // timeElement.textContent = data.time;
   dateElement.textContent = data.date;
 };
 
 const init = () => {
-  fetch("./data.json")
+  //first load the json file in the javascript
+  fetch("./species.json")
     .then((response) => response.json())
     .then((json) => {
+      //Check if the json file isnt empty
       if (json.length > 0) {
-        displayData(json[0]);
+        //filter the entries without photos
+        const filtered = json.filter((entry) => entry.photo !== "");
+        //Display the first entry
+        displayData(filtered[0]);
+        //Regularly display the other entries, on loop
         setInterval(() => {
           currentIndex = (currentIndex + 1) % json.length;
-          displayData(json[currentIndex]);
-        }, 1000);
+          displayData(filtered[currentIndex]);
+        }, 5000);
       }
     });
 };
 
-// Start the carousel when the page loads
+// Start the javascript on load of the page (literally just play the init function above)
 window.addEventListener("load", init);
