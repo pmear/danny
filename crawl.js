@@ -85,12 +85,3 @@ const crawl = () => {
 };
 
 crawl();
-
-// Promise.all([
-//   getPhoto(
-//     "https://waarneming.nl/locations/189903/photos/?species=2&date_after=2024-09-19&date_before=2024-09-19",
-//     "lols"
-//   ),
-// ]).then((values) => {
-//   console.log(values);
-// });
